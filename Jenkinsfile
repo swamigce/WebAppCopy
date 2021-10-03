@@ -29,19 +29,14 @@ pipeline {
           }
         }
 
-        stage('Performance Tests') {
-          steps {
-            echo 'Run JMeter tests'
-          }
-        }
-
       }
     }
 
-    stage('Deploy to UAT') {
+    stage('QA Certify') {
       steps {
         echo 'Deploy to UAT (AWS)'
         echo 'Notify the UAT users'
+        input 'Confirm to Proceed'
       }
     }
 
