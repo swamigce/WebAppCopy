@@ -34,8 +34,6 @@ pipeline {
 
     stage('QA Certify') {
       steps {
-        echo 'Deploy to UAT (AWS)'
-        echo 'Notify the UAT users'
         input 'Confirm to Proceed'
       }
     }
